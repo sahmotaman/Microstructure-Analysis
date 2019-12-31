@@ -112,6 +112,7 @@ fclose(texture_file);
 odf_bulk = calcODF(orientations,f_grains,'noFourier');
 % odf_bulk = calcODF(orientations);
 % odf_bulk.components{1,1}.weights = f_grains;
+ODF_deviation_error = calcError(odf_bulk,odf_experimental)
 
 figure
 plotIPDF(odf_bulk,[xvector,yvector,zvector],'antipodal','contours',20,'LineStyle','-','fill','on','linecolor','w')
